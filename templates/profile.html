@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Function to toggle the menu on small screens
+        function toggleMenu() {
+            document.getElementById('nav-Links').classList.toggle('active');
+        }
+    </script>
+</head>
+
+<body dir="rtl"> 
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Wajeez Logo">
+            </div>
+            <ul class="nav-links" id="nav-Links">
+                <li><a href="{{ url_for('index') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('result') }}">صنف ولخص !</a></li> 
+            </ul>
+            <div class="right-icons">
+                <div class="auth-buttons">
+                    <a href="/login" class="login">خروج</a>
+                </div>
+            </div>
+            <div class="toggle" onclick="toggleMenu()">☰</div> <!-- Mobile menu toggle -->
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <div class="charts-row">
+            <div class="chart-container">
+                <h2 class="title">توزيع القضايا حسب النوع</h2>
+                <canvas id="caseChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <div id="totalDocuments" class="total-documents"></div> 
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <h2 class="title">ملخص القضايا</h2>
+            <div id="caseSummaries"></div> 
+        </div>
+    </div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+</body>
+</html>

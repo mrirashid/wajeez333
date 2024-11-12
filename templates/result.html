@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صنف ولخص</title>
+    <Script src="Script.js"></Script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-Links').classList.toggle('active');}
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Wajeez Logo">
+            </div>
+            <ul class="nav-links" id="nav-Links">
+                <li><a href="{{ url_for('index') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('profile') }}">الملف الشخصي</a></li>
+                <li><a href="#">صنف ولخص !</a></li>
+            </ul>
+            <div class="right-icons">
+                <div class="auth-buttons">
+                    <a href="/login" class="login">خروج</a>
+                </div>
+            </div>
+            <div class="toggle" id="toggleButton" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <div>
+        <h2 class="headerofresult">صنف ولخص !</h2>
+    </div>
+
+    <main class="container">
+        <form method="POST">
+            <textarea name="text" id="text-input"
+                placeholder="ادخل النص" >{{ input_text if input_text else '' }}</textarea>
+            <button type="submit">ارسال</button>
+        </form>
+
+        {% if classification %}
+        <div id="classification-result">
+            <h3>تصنيف القضية:</h3>
+            <p id="classification-predict">{{ classification }}</p>
+        </div>
+        {% endif %}
+
+        {% if summary %}
+        <div id="summary-result">
+            <h3>ملخص القضية :</h3>
+            <p id="summary-text">{{ summary }}</p>
+        </div>
+        {% endif %}
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>

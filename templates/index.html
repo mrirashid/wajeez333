@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wajeez</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-Links').classList.toggle('active');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Wajeez Logo">
+            </div>
+            <ul class="nav-links" id="nav-Links">
+                <li><a href="#">الرئيسية</a></li>
+            </ul>
+            <div class="right-icons">
+                <div class="auth-buttons">
+                    <a href="/login" class="login">تسجيل الدخول</a>
+                    <a href="/create_account" class="create-account">إنشاء حساب</a>
+                </div>
+            </div>
+            <div class="toggle" id="toggleButton" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <div class="container">
+                <div class="text">
+                    <h1>من نحن؟</h1>
+                    <p>
+                        يتميز موقعنا بتوفير أداة متطورة لتصنيف وتلخيص الوثائق القانونية بكفاءة وسرعة سواء كنت محاميا
+                        مشغولا أو طالبا يدرس القانون. فإننا نوفر لك الوسيلة المثالية لتوفير الوقت والجهد في فحص وفهم
+                        الوثائق القانونية المعقدة.<br>
+                        اكتشف الطريقة الجديدة والفعالة لإدارة الوثائق القانونية مع موقعنا.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/lawyer-image.png') }}" alt="Lawyer Image">
+                </div>
+            </div>
+        </section>
+        <section class="goals">
+            <h2>أهدافنا</h2>
+            <div class="goal-cards">
+                <div class="card">
+                    <h3>زيادة الكفاءة في تصنيف</h3>
+                    <p>زيادة الكفاءة في تصنيف القضايا وتبسيطها بشكل آلي.</p>
+                </div>
+                <div class="card">
+                    <h3>توفير الوقت والجهود</h3>
+                    <p>توفير الوقت والجهود المبذولة في متابعة المستندات القانونية والمعلومات الأساسية.</p>
+                </div>
+                <div class="card">
+                    <h3>تعزيز اللغة العربية</h3>
+                    <p>تعزيز اللغة العربية في مجال الذكاء الاصطناعي ومعالجة الوثائق القانونية.</p>
+                </div>
+                <div class="card">
+                    <h3>زيادة كفاءة المحامين</h3>
+                    <p>زيادة كفاءة وانتاجية المحامين في معالجة قضاياهم المعقدة.</p>
+                </div>
+            </div>
+        </section>
+        <section class="team">
+            <h2>فريق العمل</h2>
+            <div class="team-cards">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/girl_pic.png') }}" alt="Team Member 1"
+                        class="team-img">
+                    <h3>بشرى بن دعجم</h3>
+                    <p> مهندسة AI </p>
+                    <a href="https://www.linkedin.com/in/bushra-dajam" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/girl_pic.png') }}" alt="Team Member 2"
+                        class="team-img">
+                    <h3>ليالي السلمي</h3>
+                    <p> مهندسة AI </p>
+                    <a href="https://www.linkedin.com/in/layali-alsolami" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/girl_pic.png') }}" alt="Team Member 3"
+                        class="team-img">
+                    <h3>ريوف القرشي</h3>
+                    <p>مهندسة AI </p>
+                    <a href="https://www.linkedin.com/in/reyof-alqurashi-97447b300" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/girl_pic.png') }}" alt="Team Member 4"
+                        class="team-img">
+                    <h3>ايلاف هواري </h3>
+                    <p> مهندسة AI </p>
+                    <a href="https://www.linkedin.com/in/elaf-hawwari-24357b307" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/girl_pic.png') }}" alt="Team Member 4"
+                        class="team-img">
+                    <h3>شذا الظاهري</h3>
+                    <p> مهندسة AI </p>
+                    <a href="https://www.linkedin.com/in/shatha-aldhahri-1668a02b7" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
