@@ -1,0 +1,835 @@
+/* General Styles for Both Pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    direction: rtl;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* Header Styles */
+.header {
+    text-align: center;
+    width: 100%;
+    height: 1; /* Adjust the height to account for the fixed nav */
+    background-image: url('/static/images/logo.png');
+    background-color: #445a75; /* Set the background color to #445a75 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: sticky; /*relative */
+    padding: 10px 8%; 
+    color: #ffffff; /* White text for visibility */
+    font-family: Arial, sans-serif;
+}
+
+.header h1 {
+    color: #ffffff; /* Keep text white for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f5f5f5; /* Background color for the nav */
+    display: flex;
+    padding: 1rem 2rem;
+    color: #663300;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky; /*sticky */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px; /* Define a fixed height for the nav */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+nav.scrolled {
+    background-color: #bdd1d038; /* Stable color when scrolled */
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    padding-top: 250spx; /* Add padding to push content below the fixed nav */
+    background-color: #f5f5f5; /* Light gray background for contrast */
+    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif;
+    height: 1500px; /* Simulated height for scrolling */
+}
+/* Content Section */
+
+.nav-links {
+    position: absolute;
+    right: 20%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* Distributes items evenly */
+    gap: 5px;
+    /* Ensure there's enough space between navigation items */
+    margin-right: 30px;
+    margin-left: 40vw;
+    font-size: 64px;
+    padding:0;
+
+}
+
+.nav-links li {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #663300;
+    /* Ensure text is visible with a dark color */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    /* Add a smooth transition effect */
+    padding: 20px;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    /* Add a hover effect for better user experience */
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-buttons .login {
+    background-color: #fff;
+    border: 1px solid #003366;
+    color: #003366;
+}
+
+.auth-buttons .create-account {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* About Us Section (Landing Page) */
+.about-us {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    background: radial-gradient(circle, rgba(210, 227, 255, 0.2) 50%, transparent 50%);
+    border-radius: 25px;
+}
+
+.about-us .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us .image img {
+    width: 400px;
+    margin-left: 40px;
+    /* Move the lawyer image to the right */
+}
+
+.about-us .text {
+    max-width: 500px;
+    text-align: right;
+}
+
+.about-us .text h1 {
+    font-size: 36px;
+    color: #003366;
+    /* Darker blue for headings */
+    margin-bottom: 20px;
+}
+
+.about-us .text p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Goals Section (Landing Page) */
+.goals {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.team {
+    text-align: center;
+    padding: 50px 0;
+}
+.goals h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #003366;
+}
+.goal-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.goal-cards .card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.goal-cards .card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.goal-cards .card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Login Page Layout */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.quote-section {
+    background: radial-gradient(circle, rgba(210, 227, 255, 0.2) 50%, transparent 50%);
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #003366;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #003366;
+    font-size: 28px;
+}
+
+/* Form Styling and Alignment for Login Page */
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form .login-btn {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-form .login-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-form p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.login-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#cssportal-grid {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+    position: sticky;
+    right: 30%;
+    left: 30%;
+    z-index: -2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    padding-right: 0;
+    width: max-content;
+    height: auto;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+/* User profile section */
+#div1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-right: 20px;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.user-image img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.user-name h3 {
+    color: #000436;
+    font-size: 28px;
+}
+
+/* Section title */
+.header {
+    background-color: #000436;
+    color: #FFFFFF;
+    padding: 15px;
+    width: fit-content;
+    margin-top: 20px;
+    margin-right: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-weight: bold;
+    position: sticky;
+
+}
+
+/* Chart and card section */
+#div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+#div3 {
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: bold;
+    position: sticky;
+    top: -30px;
+
+}
+
+#donut_single {
+    width: 300px;
+    height: 300px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Button style */
+.btn {
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    border-radius: 6em;
+    background-color: rgb(0, 7, 45);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255);
+}
+
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.action-buttons .btn {
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-buttons .btn.previous {
+    background-color: #b3815f;
+    color: white;
+}
+
+.action-buttons .btn.classify {
+    background-color: #007bff;
+    color: white;
+}
+
+.action-buttons .btn:hover {
+    opacity: 0.9;
+}
+
+.container {
+    position: relative;
+    top: 50px;
+    max-width: 600px;
+    margin: 50px auto; /* First value is top/bottom, second is left/right */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerofresult{
+    color: #663300;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: fit-content;
+    padding: 0 50px 0 50px ;
+    position: relative;
+    right: 43%;
+    border-radius:20px ;
+    border-bottom-left-radius:0 ;
+    border-bottom-right-radius:0 ;
+    border-top: solid 2px #663300;
+    top: 50px;
+
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+#classification-result {
+    margin-top: 20px;
+}
+
+#classification-result h3 {
+    color: #333;
+}
+
+#classification-predict {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#summary-result {
+    margin-top: 20px;
+}
+
+#summary-result h2 {
+    color: #333;
+}
+
+#summary-text {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dashboard {
+    max-width: 1000px;  /* Reduce the max-width for a smaller layout */
+    margin: 30px auto; /* Reduce margin to make the layout closer to the edges */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Charts Row */
+.charts-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Chart Container */
+.chart-container {
+    flex: 1;
+    min-width: 100px;  /* Increase min-width for better readability, but keep it small */
+    background: white;
+    padding: 10px;  /* Reduce padding for a smaller container */
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);  /* Make the shadow smaller and subtler */
+    margin: 10px;  /* Reduce margin for less spacing between elements */
+}
+
+/* Summary Section */
+.summary-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.total-documents {
+    font-size: 30px;         /* Set the font size */
+    font-weight: bold;       /* Make the text bold */
+    color: #003366;          /* Set the text color */
+    margin-top: 70px;        /* Add space from the chart */
+    text-align: center;      /* Horizontally center the text */
+    padding: 10px;           /* Add padding for better spacing */
+    background-color: #ffffff; /* Add a background color */
+    border-radius: 10px;     /* Rounded corners for a soft look */
+    width: 100%;             /* Make it take the full width */
+    max-width: 300px;        /* Limit the width to 300px for better presentation */
+    margin-left: auto;       /* Center the div horizontally */
+    margin-right: auto;      /* Center the div horizontally */
+    display: flex;           /* Enable flexbox layout */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    height: 300px;           /* Set a fixed height for vertical centering */
+    box-sizing: border-box;  /* Include padding in width/height calculations */
+}
+
+
+/* Titles */
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Case Summary Cards */
+.case-summary {
+    margin: 10px 0;
+    padding: 40px;
+    border-right: 3px solid;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.case-summary:hover {
+    transform: translateX(-5px);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Case Type Colors */
+.criminal {
+    border-color: #003366;
+}
+
+.personal {
+    border-color: #36A2EB;
+}
+
+.general {
+    border-color: #8dc9e5;
+}
+
+/* Case Summary Content */
+.case-summary strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.case-summary p {
+    margin: 8px 0;
+    color: #666;
+    line-height: 1.4;
+}
+
+.case-summary small {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+.toggle {
+    display: none; /* Keeps the element hidden */
+    position: relative;
+    left: 10%; /* Moves the element 10% from the left of its containing element */
+}
+
+.team {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.card .team-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.linkedin-link i {
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .toggle{
+        display: block;
+    }
+
+    .dashboard {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .chart-container {
+        min-width: 100%;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .case-summary {
+        padding: 12px;
+    }
+
+    .container {    
+    right: 10%;
+    }
+
+    h2{
+    right: 30%;  
+    }
+    .nav-links{
+    display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    .nav-links a{
+    font-size: 12px;
+    }
+    .logo img{
+    width: 64px;
+    }
+    .headerofresult{
+        position: sticky;
+        text-align: center;
+        width: 100%; /* Make the width 100% for smaller screens */
+        padding: 0 20px; /* Adjust padding */
+        margin-top: 30px; /* Adjust margin */
+        font-size: 16px; /* Adjust font size */
+    }
+    .container {
+        position: sticky;
+    }
+    .charts-row {
+        justify-content: center;  /* Center content on smaller screens */
+    }
+
+    .chart-container {
+        min-width: 200px;  /* Adjust min-width for smaller screens */
+        padding: 10px;  /* Slightly reduce padding on small screens */
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    .quote-section,
+    .login-form {
+        width: 100%;
+    }
+
+    .about-us .container {
+        display: block; /* Stack the content inside the container */
+        text-align: center; /* Center-align text for better readability */
+    }
+    .about-us .image img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .auth-buttons a {
+        text-decoration: none;
+        padding: 9px 10px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+}   
