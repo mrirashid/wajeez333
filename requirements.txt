@@ -28,3 +28,4 @@ seaborn
 nltk
 tashaphyne
 huggingface-hub==0.26.2
+gunicorn 
