@@ -1,4 +1,4 @@
-﻿Flask==3.0.3
+Flask==3.0.3
 gunicorn==22.0.0
 Jinja2==3.1.2
 itsdangerous==2.2.0
@@ -28,4 +28,3 @@ seaborn
 nltk
 tashaphyne
 huggingface-hub==0.26.2
-gunicorn 
